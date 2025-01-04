@@ -1,0 +1,26 @@
+h1{
+    color: #Ff0000;
+}
+h2{
+    color: #06ec26;
+    font-style: italic;
+}
+.ol-list{
+    color: brown;
+    letter-spacing: 5px;
+}
+.para1{
+    color: brown;
+    font-size: large;
+}
+.para2{
+    font-size:small;
+    color: brown;
+}
+.para3{
+    font-style: italic;
+    color: brown;
+}
+a{
+    text-decoration:none;
+}
