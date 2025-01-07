@@ -1,0 +1,41 @@
+.card1, .card2, .card3, .card4 {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.card1 {
+    position: absolute;
+    bottom: 140px;
+    left: 300px;
+    background-color: blue;
+    z-index: -4;
+}
+
+.card2 {
+    position: absolute;
+    bottom: 180px;
+    left: 350px;
+    background-color: red;
+    z-index: -3;
+}
+
+.card3 {
+    position: absolute;
+    bottom: 220px;
+    left: 400px;
+    background-color: rgb(234, 234, 23);
+    z-index: -2;
+}
+
+.card4 {
+    position: absolute;
+    top: 250px;
+    left: 440px;
+    background-color: lightgreen;
+    z-index: -1;
+}
