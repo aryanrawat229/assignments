@@ -35,7 +35,7 @@
 .card4 {
     position: absolute;
     top: 250px;
-    left: 440px;
+    left: 450px;
     background-color: lightgreen;
     z-index: -1;
 }
