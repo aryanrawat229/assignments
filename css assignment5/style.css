@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 60px;
+    padding: 0;
+}
+
+ol li {
+    margin: 56px 0;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    min-width: 200px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.line1 .box {
+    background-color: teal;
+    transform: skewX(20deg);
+    animation-name: skewLeftRight;
+}
+
+@keyframes skewLeftRight {
+    0%{
+        transform: skewX(-20deg);
+    }
+    25%{
+        transform: skewX(0deg);
+    }
+    50%{
+        transform: skewX(20deg);
+    }
+    75%{
+        transform: skewX(0deg);
+    }
+    100%{
+        transform: skewX(-20deg);
+    }
+}
+
+
+.line2 .box {
+    background-color: #006666;
+    transform: skewY(20deg);
+    animation-name: skewUpDown;
+}
+
+@keyframes skewUpDown {
+    0%{
+        transform: skewY(-20deg);
+    }
+    25%{
+        transform: skewY(0deg);
+    }
+    50%{
+        transform: skewY(20deg);
+    }
+    75%{
+        transform: skewY(0deg);
+    }
+    100%{
+        transform: skewY(-20deg);
+    }
+
+}
+
+.line3 .box {
+    background-color: teal;
+    animation-name: rotate360;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.line4 .box1 {
+    background-color: lightblue;
+    animation-name: decreaseHeight;
+}
+
+.line4 .box2 {
+    background-color: maroon;
+    animation-name: decreaseWidth;
+}
+
+.line4 .box3 {
+    background-color: green;
+    animation-name: rotateReverse;
+}
+
+@keyframes decreaseHeight {
+    0%, 100% {
+        height: 100px;
+    }
+    50% {
+        height: 50px;
+    }
+}
+
+@keyframes decreaseWidth {
+    0%, 100% {
+        width: 100px;
+    }
+    50% {
+        width: 50px;
+    }
+}
+
+@keyframes rotateReverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+a {
+    margin-top: 20px;
+    text-align: center;
+}
