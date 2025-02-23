@@ -1,6 +1,6 @@
 // arrow function
 
-const fun ()=>{
+const fun=()=>{
     console.log("Hello bros")
 };
 
