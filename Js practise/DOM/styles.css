@@ -1,0 +1,8 @@
+.card {
+    width: 100px;
+    height: 200px;
+    background-color: lightblue;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
