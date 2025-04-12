@@ -1,4 +1,4 @@
-// Q3. Count the Vowels
+//Q3. Count the Vowels
 function  Count_Vowel (str) {
     let vowels="AEIOUaeiou";
     let count = 0;
