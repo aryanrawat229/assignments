@@ -1,0 +1,19 @@
+.navbar {
+    color: white !important;
+} 
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.carousel-item img {
+    height: 500px; /* Adjust height as needed */
+    object-fit: cover;
+}
