@@ -1,19 +1,209 @@
-.navbar {
-    color: white !important;
-} 
-
-.navbar-nav {
-    margin-left: auto;
+/* ===== Enhanced Styles ===== */
+:root {
+    --primary-gold: #ffc107;
+    --dark-bg: #1a1a1a;
+  }
+  
+  /* Smooth scrolling & typography */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /*navbar */
+  .navbar {
+    transition: all 0.4s ease;
+    padding: 15px 0;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(26, 26, 26, 0.95) !important;
+    padding: 10px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
     display: flex;
-    justify-content: flex-end;
-    width: 90%;
+    align-items: center;
+  }
+  
+  .logo-icon {
+    color: var(--primary-gold);
+    margin-left: 10px;
+    font-size: 1.8rem;
+  }
+  
+  .nav-link {
+    position: relative;
+    margin: 0 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-gold);
+    transition: width 0.3s;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .btn-book {
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .btn-book:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+  }
+
+  .navbar,
+.navbar-brand,
+.nav-link,
+.navbar-toggler-icon {
+  color: white !important;
 }
 
-.nav-link:hover {
-    color: #ffc107 !important;
+/* Force white text in navbar */
+.navbar,
+.navbar-brand,
+.nav-link,
+.navbar-toggler-icon {
+  color: white !important;
 }
 
-.carousel-item img {
-    height: 500px; /* Adjust height as needed */
-    object-fit: cover;
+/* White navbar toggler (hamburger) icon */
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.5) !important;
 }
+  
+  /* Enhanced carousel */
+  .carousel-item {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .carousel-item img {
+    filter: brightness(50%);
+    object-position: center;
+  }
+  
+  .carousel-caption {
+    bottom: 30%;
+    text-align: left;
+    padding: 0 5%;
+  }
+
+  .carousel {
+    position: relative;
+  }
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .carousel-caption h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    animation: fadeInUp 1.5s ease;
+  }
+  
+  .carousel-indicators-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Improved carousel fade effect */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carousel-fade .carousel-item.active {
+    opacity: 1;
+  }
+
+  
+  /* Back to top button */
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    z-index: 99;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .navbar-brand {
+      font-size: 1.8rem;
+    }
+    
+    .carousel-caption {
+      bottom: 20%;
+    }
+    
+    .carousel-caption h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-caption {
+      text-align: center;
+    }
+    
+    .carousel-caption h1 {
+      font-size: 2rem;
+    }
+    
+    .carousel-caption .btn {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
